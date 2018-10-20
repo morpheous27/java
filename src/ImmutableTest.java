@@ -6,7 +6,7 @@ public class ImmutableTest {
 
 final class ImmutableClass {
 
-	final private String name = ;
-	final List<String> list;
+	final private String name = "";
+	final List<String> list=null;
 
 }
