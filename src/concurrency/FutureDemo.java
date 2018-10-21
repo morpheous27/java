@@ -18,9 +18,9 @@ public class FutureDemo {
 
 }
 
-class Thread31 implements Callable {
+class Thread31 implements Callable<String> {
 
-	public Object call() throws Exception {
+	public String call() throws Exception {
 
 		Thread.sleep(10000);
 		return "done";
