@@ -1,5 +1,5 @@
 package java8;
 
-public class StreamPredicate {
+public class StreamMemoryTest {
 
 }

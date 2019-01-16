@@ -16,14 +16,14 @@ public class InterfaceTest {
 
 		};
 
-		obj.interfaceMethod2();
+		//obj.interfaceMethod2();
 
 		ParentAbsClass objc = new ParentAbsClass() {
 
 			int i = 5;
 		};
 
-		System.out.println("Object class value" + objc.i);
+		//System.out.println("Object class value" + objc.i);
 
 	}
 

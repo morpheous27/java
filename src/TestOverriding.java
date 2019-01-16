@@ -6,7 +6,7 @@ public class TestOverriding {
 		return null;
 	}
 
-	int printme() {
+	Number printme() {
 		return 0;
 	}
 
@@ -15,7 +15,7 @@ public class TestOverriding {
 class TestOveridingSub extends TestOverriding {
 	protected String bill = "small bill";
 
-	Integer printme() {
+	Integer printme() throws RuntimeException{
 		return 1;
 	}
 
