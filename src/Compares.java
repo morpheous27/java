@@ -14,7 +14,7 @@ public class Compares {
 
 	}
 
-	static class MySort implements Comparator<String> {
+	static class MySort implements Comcloseparator<String> {
 		public int compare(String o1, String o2) {
 			// TODO Auto-generated method stub
 			int a = 1;
