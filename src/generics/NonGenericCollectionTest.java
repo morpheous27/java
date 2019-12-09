@@ -29,8 +29,8 @@ public class NonGenericCollectionTest {
 	public static void checkSuperType(List<? super Number> list)
 	{
 		//for(Number n : list) // jvm will not cast the value but user has to explicitly cast
-		for(Number o : list)
-			System.out.println(o);
+		/*for(Number o : list) // compile time error
+			System.out.println(o);*/
 	}
 	
 	

@@ -14,7 +14,7 @@ public class HourglassSum {
 
 		int array[][] = new int[6][6];
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		br.rea
+		//mmbr.rea
 		for (int i = 0; i < 6; i++) {
 
 			String line = br.readLine();

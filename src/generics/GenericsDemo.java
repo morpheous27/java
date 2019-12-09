@@ -17,8 +17,8 @@ public class GenericsDemo {
 		fList.add(1.1f);
 		fList.add(2.2f);
 		GenericsDemo demo = new GenericsDemo();
-		demo.testSuper(fList); // compile time error
-		demo.testSuperUsingInterface(fList);
+		//demo.testSuper(fList); // compile time error
+		demo.testSuperUsingInterface(iList);
 		demo.testExtends(fList);
 
 	}
@@ -27,7 +27,7 @@ public class GenericsDemo {
 		System.out.println("extends method");
 		for (Number n : list)
 			System.out.println(n);				
-		list.add(3);
+		//list.add(3); // compile time error
 	}
 
 	private void testSuper(List<? super Integer> list) {
@@ -41,7 +41,7 @@ public class GenericsDemo {
 		System.out.println("super method");
 		for (Object n : list)
 			System.out.println(n);
-		list.add(Integer.MAX_VALUE);
+		//list.add(Integer.MAX_VALUE); // compile time error, int is primitive and not serializable
 	}
 
 }
