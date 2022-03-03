@@ -6,8 +6,8 @@ public class OverloadingTest {
 		System.out.println("Object");
 	}
 
-	public void print(Integer i) {
-		System.out.println("Integer");
+	public void print(String... i) {
+		System.out.println("multiple parameters");
 	}
 
 	public void print(String s) {
@@ -25,7 +25,7 @@ public class OverloadingTest {
 	public static void main(String[] args) {
 
 		OverloadingTest obj = new OverloadingTest();
-		obj.print("");
+		obj.print("","");
 	}
 
 }

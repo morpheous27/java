@@ -1,4 +1,4 @@
-package dsAlgo;
+	package dsAlgo;
 
 public class LinkedList {
 
