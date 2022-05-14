@@ -12,7 +12,6 @@ public class ExecutorExample {
 
 		while (true) {
 			executor.submit(t);
-
 		}
 
 	}

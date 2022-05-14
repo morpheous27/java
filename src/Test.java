@@ -3,34 +3,46 @@ import java.util.function.Function;
 
 public class Test {
     public static void main(String[] args) {
-        Map<String, Integer> forestSpecies = new HashMap<>();
+        //String input = "aaabbdd";
+        String input = "aaabbbcde";
+        char[] ca = new char[26];
+        char[] result = new char[input.length()];
+        int max = 0;
+        char maxFChar = 'a';
 
-        forestSpecies.put("Amazon", 30000);
-        forestSpecies.put("Congo", 10000);
-        forestSpecies.put("Daintree", 15000);
-        forestSpecies.put("Amazon", 40000);
-        System.out.println(2/4);
-        int a = 1;
-        int b = 0;
-        //int c = a/b;
-        //System.out.print(c);
+        for(char c : input.toCharArray()){
+            ca[c-'a']++;
+            if(max < ca[c-'a']){
+                max = ca[c-'a'];
+                maxFChar = c;
+            }
+        }
+        for(int i=0;i<input.length() && ca[maxFChar-'a'] > 0;){
+            result[i] = maxFChar;
+            ca[maxFChar-'a']--;
+            i = i+2;
+        }
 
-        int forestCount = forestSpecies.size();
-        Money money = new Money();
-        Money iMoney = new IMoney();
-        System.out.println(money instanceof Money);
-        System.out.println(iMoney instanceof Money);
-        System.out.println(iMoney instanceof Object);
+        //handle not possible
 
-        Function<Integer,Integer> f = (x) -> x * x;
-    }
+        int k=0;
+        for(int i=1;i<input.length(); ){
+            while(ca[k]==0){
+                k++;
+            }
+            if(ca[k]!=0){
+                result[i] = (char)(k + 'a');
+                System.out.println(result[i]);
+                ca[k]--;
+            }
+            i = i+2;
+        }
 
+        System.out.println(String.valueOf(result));
 
-    static class Money{
-
-    }
-
-    static class IMoney extends Money{
 
     }
 }
+
+
+
